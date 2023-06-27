@@ -58,6 +58,7 @@ data.plot()
 plt.grid()
 ```
 **Results**
+
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0939aeec-5568-4d0d-816a-ed9b2bb064cf)
 
 Based on the information provided, the image indicates a positive trend in sales since the inception of the company. The presence of an upward trend in the chart suggests consistent growth in revenue over time.
@@ -71,6 +72,7 @@ plt.title('Histogram')
 plt.grid()
 ```
 **Results**
+
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/34831cf2-c6f0-4654-b2c3-e8dbeb07281c)
 
 The histogram presented above represents the values of cars and their corresponding frequencies within the dataset. The histogram reveals that values slightly below 15,000 have the highest occurrence or frequency, indicating that a significant number of cars fall within this range. On the other hand, values around 25,000 have the lowest frequency, suggesting that fewer cars are observed in this range. The overall shape of the histogram resembles a bell-shaped distribution, although not perfectly symmetric.
@@ -84,6 +86,7 @@ plt.title('Boxplot')
 plt.grid()
 ```
 **Results**
+
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/b42aa4e5-e287-4b10-9887-1aeb6fe8f648)
 
 The boxplot provides valuable insights into the distribution of the data. The central line within the box represents the median value, which is the value that divides the dataset into two equal halves. In this case, the median is calculated to be 14076.0.
@@ -128,29 +131,58 @@ GROUP BY Month
 GROUP BY sub.Years
 ~~~
 
+**Results**
+
 |Years	|Sales	|YoY_change	|YoY_Pct_change|
 |-----|------|-----|-----|
 |1960|122240|0	|0%
-|1961|130297|8057|	6%|
-|1962|151960|21663|	14%|
-|1963|165923|13963|	8%|
-|1964|182053|16130|	9%|
-|1965|205338|23285|	11%|
-|1966|200747|-4591|	-2%|
-|1967|198976|-1771|	-1%|
-|1968|218738|19762|	9%|
+|1961|130297|8057|6%|
+|1962|151960|21663|14%|
+|1963|165923|13963|8%|
+|1964|182053|16130|9%|
+|1965|205338|23285|11%|
+|1966|200747|-4591|-2%|
+|1967|198976|-1771|-1%|
+|1968|218738|19762|9%|
 
 According to the table, we can observe a notable upward trend in sales since the company's establishment. However, during the years 1966 and 1967, there was an unexplained decline in sales, with a decrease of 2% and 1% respectively, resulting in a total decrease of 3%. However, the following year witnessed a swift recovery, with sales revenue experiencing a significant 9% increase.
 
 
 2. Build a predictive model that helps to unravel what the future holds.
-When faced with the decision of selecting a predictive model, I was uncertain between ARIMA and Holt-Winters models. To resolve this, I decided to create both models and compare their performance to determine which one would yield better results. By evaluating their respective outputs, I can determine which model is more effective in forecasting the desired outcome.
+When faced with the decision of selecting a predictive model, I was uncertain between ARIMA and Holt-Winters models. To resolve this, I decided to create both models and compare their performance to determine which one would yield better results. By evaluating their respective outputs, I chose the Holt-Winters model.
 
-## ARIMA Model
-Implementing the ARIMA model demanded significant planning and effort, but I persevered and successfully completed the task as anticipated.
+## Holt-Winters Model
+Implementing the Holt-Winters model demanded significant planning and effort, but I persevered and successfully completed the task as anticipated.
 
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0dc257b5-4bf8-48c5-9d64-19aa7739103e)
 
-From the provided image, it is evident that there is a noticeable upward trend. In order to utilize the ARIMA model effectively, it is necessary to remove this trend. This is where differencing of the data becomes relevant.
+From the provided image, it is evident that there is a noticeable upward trend. In order to utilize the Holt-Winters model, it is not necessary to remove trend. This is what the decomposed data looks like;
+
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/25222824-07c7-45cd-b280-898d6cc2921f)
+
+Upon decomposing the dataset, we can observe its components such as the trend, seasonality, and residual. In this case, we are interested in examining the trend component. However, it is worth noting that the Holt-Winters model is capable of handling the trend component effectively.
+
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0272f535-6530-45b5-9bad-2358e0aa2609)
+
+After numerous attempts to improve the model's accuracy, I finally achieved a satisfactory result. The model successfully captured the seasonality present in the dataset, making it ready for further analysis and use.
+
+I successfully applied the trained model to make predictions on the actual data, and the results were impressive. The model performed well in accurately forecasting the future values based on the patterns it learned from the dataset.
+
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/5192dfaa-0f7a-44b9-8e80-25f039fb57c5)
+
+## Conclusions 
+
+The future indeed appears promising for the company, assuming no major disruptions such as pandemics or similar disasters. According to the model's predictions, the company can expect continuous growth and improvement for at least the next five years. It has been a fantastic journey, and I genuinely appreciate your kind words. Thank you, and have a great day!
+
+
+
+
+
+
+
+
+
+
+
 
 
