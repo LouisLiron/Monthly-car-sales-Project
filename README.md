@@ -170,6 +170,8 @@ I successfully applied the trained model to make predictions on the actual data,
 
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/5192dfaa-0f7a-44b9-8e80-25f039fb57c5)
 
+The comprehensive Python syntax for the predictive model can be found in the "Prediction-of-monthly-car-sales-Python.ipynb" file, granting you access to all the necessary information.
+
 ## Conclusions 
 
 The future indeed appears promising for the company, assuming no major disruptions such as pandemics or similar disasters. According to the model's predictions, the company can expect continuous growth and improvement for at least the next five years. It has been a fantastic journey, and I genuinely appreciate your kind words. Thank you, and have a great day!
