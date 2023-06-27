@@ -9,7 +9,7 @@ An exciting data analysis project awaits! I've have obtained a dataset from an a
 
 ## Objective
 1. Understand the data
-2. Build a predictive model that hepl to unravel what the future holds.
+2. Build a predictive model that help to unravel what the future holds.
 
 ## Analysis
 1. Understand the data
