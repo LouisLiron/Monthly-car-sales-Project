@@ -149,6 +149,8 @@ When faced with the decision of selecting a predictive model, I was uncertain be
 ## ARIMA Model
 Implementing the ARIMA model demanded significant planning and effort, but I persevered and successfully completed the task as anticipated.
 
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0dc257b5-4bf8-48c5-9d64-19aa7739103e)
 
+From the provided image, it is evident that there is a noticeable upward trend. In order to utilize the ARIMA model effectively, it is necessary to remove this trend. This is where differencing of the data becomes relevant.
 
 
