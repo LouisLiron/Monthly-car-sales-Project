@@ -174,7 +174,7 @@ The comprehensive Python syntax for the predictive model can be found in the "Pr
 
 ## Conclusions 
 
-The future indeed appears promising for the company, assuming no major disruptions such as pandemics or similar disasters. According to the model's predictions, the company can expect continuous growth and improvement for at least the next five years. It has been a fantastic journey, and I genuinely appreciate your kind words. Thank you, and have a great day!
+The future indeed appears promising for the company, assuming no major disruptions such as pandemics or similar disasters. According to the model's predictions, the company can expect continuous growth and improvement for at least the next five years. It has been a fantastic journey, and I genuinely appreciate you. Thank you, and have a great day!
 
 
 
