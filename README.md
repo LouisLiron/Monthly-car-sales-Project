@@ -143,7 +143,7 @@ GROUP BY sub.Years
 According to the table, we can observe a notable upward trend in sales since the company's establishment. However, during the years 1966 and 1967, there was an unexplained decline in sales, with a decrease of 2% and 1% respectively, resulting in a total decrease of 3%. However, the following year witnessed a swift recovery, with sales revenue experiencing a significant 9% increase.
 
 
-2. Build a predictive model that hepl to unravel what the future holds.
+2. Build a predictive model that help to unravel what the future holds.
 When faced with the decision of selecting a predictive model, I was uncertain between ARIMA and Holt-Winters models. To resolve this, I decided to create both models and compare their performance to determine which one would yield better results. By evaluating their respective outputs, I can determine which model is more effective in forecasting the desired outcome.
 
 ## ARIMA Model
