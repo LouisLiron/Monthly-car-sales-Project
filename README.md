@@ -93,3 +93,62 @@ The box itself represents the interquartile range (IQR), which encompasses the m
 The whiskers in the boxplot indicate the minimum and maximum values of the dataset, excluding any outliers. The distance between the whiskers and the box represents the data points that fall outside the upper or lower quartile. These points are considered potential outliers or extreme values.
 
 Overall, the boxplot provides a visual summary of the dataset, highlighting the central tendency, spread, and presence of any outliers.
+
+Let's take a look at some SQL syntax;
+~~~SQL
+--viewing the date range 
+SELECT 
+    CAST(MAX(Month)AS date) AS Max_date,
+    CAST(MIN(Month)AS date) AS Min_date, 
+    CONCAT(CAST(MAX(Month)-MIN(Month)AS INT), ' ', 'days') AS Date_range
+FROM
+    Monthly_car_sales
+~~~
+**Results**
+|Max_date|Min_date|Date_range|
+|-----|------|-----|
+|1968-12-01|1960-01-01|3257 days|
+
+The dataset in question spans a duration of 3257 days, which is equivalent to a total of 9 years. This indicates that the data encompasses a period of 9 years, from the beginning to the end.
+
+~~~SQL
+SELECT DISTINCT
+    sub.Years AS Years, 
+    SUM(sub.Sales) AS Sales, 
+    COALESCE(SUM(sub.Sales) - LAG(SUM(sub.Sales)) OVER (ORDER BY sub.Years), 0) AS YoY_change,
+    CONCAT(ROUND(COALESCE(SUM(sub.Sales) - LAG(SUM(sub.Sales)) OVER (ORDER BY sub.Years), 0) / SUM(sub.Sales), 2) * 100, '%') AS YoY_Pct_change
+
+FROM (
+SELECT DISTINCT
+	YEAR(Month) AS Years, 
+	SUM(Sales) AS Sales
+FROM Monthly_car_sales
+GROUP BY Month
+) AS sub
+GROUP BY sub.Years
+~~~
+
+|Years	|Sales	|YoY_change	|YoY_Pct_change|
+|-----|------|-----|-----|
+|1960|122240|0	|0%
+|1961|130297|8057|	6%|
+|1962|151960|21663|	14%|
+|1963|165923|13963|	8%|
+|1964|182053|16130|	9%|
+|1965|205338|23285|	11%|
+|1966|200747|-4591|	-2%|
+|1967|198976|-1771|	-1%|
+|1968|218738|19762|	9%|
+
+According to the table, we can observe a notable upward trend in sales since the company's establishment. However, during the years 1966 and 1967, there was an unexplained decline in sales, with a decrease of 2% and 1% respectively, resulting in a total decrease of 3%. However, the following year witnessed a swift recovery, with sales revenue experiencing a significant 9% increase.
+
+
+2. Build a predictive model that hepl to unravel what the future holds.
+When faced with the decision of selecting a predictive model, I was uncertain between ARIMA and Holt-Winters models. To resolve this, I decided to create both models and compare their performance to determine which one would yield better results. By evaluating their respective outputs, I can determine which model is more effective in forecasting the desired outcome.
+
+## ARIMA Model
+Implementing the ARIMA model demanded significant planning and effort, but we persevered and successfully completed the task as anticipated.
+
+
+
+
