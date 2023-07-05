@@ -59,13 +59,14 @@ plt.grid()
 ```
 **Results**
 
-![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0939aeec-5568-4d0d-816a-ed9b2bb064cf)
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/c64c3d98-9c07-44a9-98ab-7b6f412ec84a)
+
 
 Based on the information provided, the image indicates a positive trend in sales since the inception of the company. The presence of an upward trend in the chart suggests consistent growth in revenue over time.
 
 ```python
 #A histigram helps to understand the distribution of the data
-plt.hist(data, bins=20, density=True)
+plt.hist(data)
 plt.xlabel('Values')
 plt.ylabel('Frequency')
 plt.title('Histogram')
@@ -73,7 +74,8 @@ plt.grid()
 ```
 **Results**
 
-![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/34831cf2-c6f0-4654-b2c3-e8dbeb07281c)
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/8cceb78a-9c6f-4c0b-ba3d-f19d9a1d7c82)
+
 
 The histogram presented above represents the values of cars and their corresponding frequencies within the dataset. The histogram reveals that values slightly below 15,000 have the highest occurrence or frequency, indicating that a significant number of cars fall within this range. On the other hand, values around 25,000 have the lowest frequency, suggesting that fewer cars are observed in this range. The overall shape of the histogram resembles a bell-shaped distribution, although not perfectly symmetric.
 
@@ -87,7 +89,8 @@ plt.grid()
 ```
 **Results**
 
-![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/b42aa4e5-e287-4b10-9887-1aeb6fe8f648)
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/03714c9a-64b6-403a-9e0e-348c5f23af82)
+
 
 The boxplot provides valuable insights into the distribution of the data. The central line within the box represents the median value, which is the value that divides the dataset into two equal halves. In this case, the median is calculated to be 14076.0.
 
@@ -154,8 +157,9 @@ When faced with the decision of selecting a predictive model, I was uncertain be
 ## Holt-Winters Model
 Implementing the Holt-Winters model demanded significant planning and effort, but I persevered and successfully completed the task as anticipated.
 
-![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/0dc257b5-4bf8-48c5-9d64-19aa7739103e)
+![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/7c074a06-0594-4515-b1af-d9b4718ead3e)
 
+ 
 From the provided image, it is evident that there is a noticeable upward trend. In order to utilize the Holt-Winters model, it is not necessary to remove trend. This is what the decomposed data looks like;
 
 ![image](https://github.com/LouisLiron/Monthly-car-sales-Project/assets/124049051/25222824-07c7-45cd-b280-898d6cc2921f)
